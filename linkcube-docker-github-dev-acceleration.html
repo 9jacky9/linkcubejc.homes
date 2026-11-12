@@ -46,7 +46,7 @@
       <section style="font-size:15px; line-height:1.85; color:#d1d5db;">
         
         <h2 style="font-size:19px; color:#fff; margin:24px 0 10px; font-weight:700;">一、分布式研发工作流中的跨洋网络绊脚石</h2>
-        <p>在跨国开源协同与现代微服务架构中，开发者的日常心流往往被缓慢的网络频繁打断：Git Push超时报错、Submodule子模块递归拉取频繁中断、Docker构建时海外APT/NPM源卡死不动。出海研发技术总监在评估全套网络方案并参考<a href="https://dajichang.mom/" target="_blank" style="color:#5eead4; font-weight:700; text-decoration:underline;">优质节点精选指南</a>时，通常将链路的长期连通率、突发高并发容忍度与对常见开发者工具链的兼容性列为决定性标准，旨在彻底移除阻碍开发者生产力的隐形摩擦。</p>
+        <p>在跨国开源协同与现代微服务架构中，开发者的日常心流往往被缓慢的网络频繁打断：Git Push超时报错、Submodule子模块递归拉取频繁中断、Docker构建时海外APT/NPM源卡死不动。出海研发技术总监在评估全套网络方案并参考<a href="https://dajichang.mom/" target="_blank" style="color:#5eead4; font-weight:700; text-decoration:underline;">全球代码托管加速通道</a>时，通常将链路的长期连通率、突发高并发容忍度与对常见开发者工具链的兼容性列为决定性标准，旨在彻底移除阻碍开发者生产力的隐形摩擦。</p>
         <h2 style="font-size:19px; color:#fff; margin:24px 0 10px; font-weight:700;">二、GitHub SSH 与 HTTPS 协议传输的双向优化</h2>
         <p>在与GitHub进行版本交互时，推荐优先选用基于SSH密钥的通信方式。通过在~/.ssh/config中为github.com主机条目配置ProxyCommand或ConnectCommand参数，让SSH流量透明经由本地代理隧道转发，不仅避免了公网DNS污染对IP的解析漂移，更能大幅消除长代码库推送时的TCP握手延迟，带来按次回车即刻响应的流畅体验。</p>
         <h2 style="font-size:19px; color:#fff; margin:24px 0 10px; font-weight:700;">三、Docker 多阶段构建与国内/海外源科学分离</h2>

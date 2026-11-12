@@ -46,7 +46,7 @@
       <section style="font-size:15px; line-height:1.85; color:#d1d5db;">
         
         <h2 style="font-size:19px; color:#fff; margin:24px 0 10px; font-weight:700;">一、两大主流代理客户端内核的配置范式差异</h2>
-        <p>在当今出海技术生态中，Clash与Sing-Box代表了两种截然不同的设计哲学。Clash依靠人类可读性极强的YAML层级文件与成熟的Rule-Provider生态广为流行；而Sing-Box则拥抱严格的JSON规范与纳秒级二进制规则集(SRS)，追求极致性能。许多开发者在选用跨平台的<a href="https://dajichang.mom/" target="_blank" style="color:#5eead4; font-weight:700; text-decoration:underline;">海外网络加速方案</a>时，经常需要在不同设备上混合使用这两类客户端，因而掌握配置规则的自动化转换与解析原理成为了进阶必备技能。</p>
+        <p>在当今出海技术生态中，Clash与Sing-Box代表了两种截然不同的设计哲学。Clash依靠人类可读性极强的YAML层级文件与成熟的Rule-Provider生态广为流行；而Sing-Box则拥抱严格的JSON规范与纳秒级二进制规则集(SRS)，追求极致性能。许多开发者在选用跨平台的<a href="https://dajichang.mom/" target="_blank" style="color:#5eead4; font-weight:700; text-decoration:underline;">智能路由分流配置</a>时，经常需要在不同设备上混合使用这两类客户端，因而掌握配置规则的自动化转换与解析原理成为了进阶必备技能。</p>
         <h2 style="font-size:19px; color:#fff; margin:24px 0 10px; font-weight:700;">二、基于开源 Subconverter 的自动化转换工作流</h2>
         <p>开源Subconverter工具是打通不同协议与配置格式的核心利器。通过自建本地Docker容器运行Subconverter后端，配合简洁的API调用，可在几秒钟内将原始节点参数与分流规则一键转换为Clash Meta或Sing-Box的标准配置文件。更重要的是，本地部署转换服务完全杜绝了个人节点参数被第三方公共转换站恶意嗅探或滥用的巨大隐私安全隐患。</p>
         <h2 style="font-size:19px; color:#fff; margin:24px 0 10px; font-weight:700;">三、YAML 规则语法向 Sing-Box JSON 规则集的映射</h2>

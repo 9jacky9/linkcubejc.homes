@@ -46,7 +46,7 @@
       <section style="font-size:15px; line-height:1.85; color:#d1d5db;">
         
         <h2 style="font-size:19px; color:#fff; margin:24px 0 10px; font-weight:700;">一、DNS 污染劫持与隐私泄露的底层技术机理</h2>
-        <p>传统的DNS域名查询采用明文UDP协议的53端口进行传输，数据包在跨越公网运营商网关时，极易被中间网络设备嗅探甚至篡改。旁路伪造的错误IP响应常常早于真实响应到达用户终端，即俗称的DNS投毒污染。用户在接入<a href="https://dajichang.mom/" target="_blank" style="color:#5eead4; font-weight:700; text-decoration:underline;">国际高速网络通道</a>时，若未在本地构建加密DNS防护，即便代理通道再快，也会因首先遭遇了错误的域名解析而导致网页无法打开或误入钓鱼欺诈页面。</p>
+        <p>传统的DNS域名查询采用明文UDP协议的53端口进行传输，数据包在跨越公网运营商网关时，极易被中间网络设备嗅探甚至篡改。旁路伪造的错误IP响应常常早于真实响应到达用户终端，即俗称的DNS投毒污染。用户在接入<a href="https://dajichang.mom/" target="_blank" style="color:#5eead4; font-weight:700; text-decoration:underline;">端到端加密网络基建</a>时，若未在本地构建加密DNS防护，即便代理通道再快，也会因首先遭遇了错误的域名解析而导致网页无法打开或误入钓鱼欺诈页面。</p>
         <h2 style="font-size:19px; color:#fff; margin:24px 0 10px; font-weight:700;">二、DoH 与 DoT 加密 DNS 协议的工作原理</h2>
         <p>为了彻底终结DNS明文传输的脆弱性，现代网络标准推出了基于TLS加密的DoT(DNS over TLS)与基于HTTPS的DoH(DNS over HTTPS)协议。DoH将DNS查询伪装成合规的HTTP/2或HTTP/3加密网页请求，混淆在正常的443端口流量之中。中间审查设备不仅无法获知用户正在查询哪个具体域名，更从物理层面丧失了伪造和篡改响应数据的能力。</p>
         <h2 style="font-size:19px; color:#fff; margin:24px 0 10px; font-weight:700;">三、彻底治理 WebRTC 本地真实 IP 泄露实操</h2>

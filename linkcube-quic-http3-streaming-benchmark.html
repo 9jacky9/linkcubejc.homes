@@ -46,7 +46,7 @@
       <section style="font-size:15px; line-height:1.85; color:#d1d5db;">
         
         <h2 style="font-size:19px; color:#fff; margin:24px 0 10px; font-weight:700;">一、传统 HTTP/2 基于 TCP 传输在长距离链路中的瓶颈</h2>
-        <p>HTTP/2虽然引入了多路复用技术，允许在一个TCP连接上并发交错发送多个HTTP请求，但这一设计在跨大洋长距离网络中却存在致命的队头阻塞(Head-of-Line Blocking)缺陷。由于TCP保证严格顺序交付，一旦某个数据包在跨洋海缆上发生偶发丢失，该连接上的所有并行请求都必须停滞等待该数据包重传完毕。不少网络架构师在翻阅<a href="https://dajichang.mom/" target="_blank" style="color:#5eead4; font-weight:700; text-decoration:underline;">跨境专线选型指南</a>时，越来越看重网络服务对前沿QUIC/HTTP/3协议的支持深度，以突破传统TCP的性能天花板。</p>
+        <p>HTTP/2虽然引入了多路复用技术，允许在一个TCP连接上并发交错发送多个HTTP请求，但这一设计在跨大洋长距离网络中却存在致命的队头阻塞(Head-of-Line Blocking)缺陷。由于TCP保证严格顺序交付，一旦某个数据包在跨洋海缆上发生偶发丢失，该连接上的所有并行请求都必须停滞等待该数据包重传完毕。不少网络架构师在翻阅<a href="https://dajichang.mom/" target="_blank" style="color:#5eead4; font-weight:700; text-decoration:underline;">下一代传输协议方案</a>时，越来越看重网络服务对前沿QUIC/HTTP/3协议的支持深度，以突破传统TCP的性能天花板。</p>
         <h2 style="font-size:19px; color:#fff; margin:24px 0 10px; font-weight:700;">二、QUIC 单流独立性与队头阻塞的彻底消除</h2>
         <p>基于UDP构建的QUIC协议将多路复用下沉至传输层。在QUIC架构下，每一个HTTP请求流(Stream)都是相互完全独立的。某个流的数据包丢失仅会影响其自身的交付，其他数十个并发数据流依然能够在毫秒级内继续被应用层顺畅读取。实测表明，在面对跨洋链路上不可避免的偶发抖动与1%丢包率时，QUIC的多流并发加载耗时比传统HTTP/2快了近一倍。</p>
         <h2 style="font-size:19px; color:#fff; margin:24px 0 10px; font-weight:700;">三、0-RTT 极速连接建立与握手延迟大幅缩减</h2>

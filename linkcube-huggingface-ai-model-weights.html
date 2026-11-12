@@ -46,7 +46,7 @@
       <section style="font-size:15px; line-height:1.85; color:#d1d5db;">
         
         <h2 style="font-size:19px; color:#fff; margin:24px 0 10px; font-weight:700;">一、AI 研发中大模型权重分发的网络巨载痛点</h2>
-        <p>在前沿人工智能研发与私有化本地部署过程中，拉取经过量化的Safetensors格式模型权重已成家常便饭。一个完整的70B参数大模型权重体积往往突破40GB，由多个分块大文件构成。当研发团队需要高频向海外HuggingFace或ModelScope源站同步最新权重时，常常需要接入具备充沛突发吞吐能力的<a href="https://dajichang.mom/" target="_blank" style="color:#5eead4; font-weight:700; text-decoration:underline;">网络加速器</a>，以杜绝因公网传输丢包导致数小时下载成果功亏一篑的尴尬。</p>
+        <p>在前沿人工智能研发与私有化本地部署过程中，拉取经过量化的Safetensors格式模型权重已成家常便饭。一个完整的70B参数大模型权重体积往往突破40GB，由多个分块大文件构成。当研发团队需要高频向海外HuggingFace或ModelScope源站同步最新权重时，常常需要接入具备充沛突发吞吐能力的<a href="https://dajichang.mom/" target="_blank" style="color:#5eead4; font-weight:700; text-decoration:underline;">海量资产极速直连通道</a>，以杜绝因公网传输丢包导致数小时下载成果功亏一篑的尴尬。</p>
         <h2 style="font-size:19px; color:#fff; margin:24px 0 10px; font-weight:700;">二、Git LFS 跨洋拉取超时成因与底层机制</h2>
         <p>许多开发者习惯直接使用git clone命令拉取HuggingFace上的模型仓库。然而Git LFS(Large File Storage)在拉取大文件时，默认采用单线程顺序串行下载，对网络抖动极其敏感。一旦中间网络发生偶发性超时重传，Git LFS客户端便会直接抛出Smudge error错误并彻底终止下载任务。解决该痛点的关键在于将大体积文件下载与轻量级Git版本历史解耦。</p>
         <h2 style="font-size:19px; color:#fff; margin:24px 0 10px; font-weight:700;">三、基于 aria2 多线程并发与 HTTP 代理加速实战</h2>
@@ -63,7 +63,7 @@
       <p style="margin-top: 24px; padding: 18px; background: #102323; border-left: 4px solid #14b8a6; border-radius: 4px; line-height: 1.8;">
         <strong>技术总结与建议：</strong> 攻克海量大模型权重的传输难关，需要工具链的解耦优化与高速物理专网通道的有机协同。借助多线程断点传输与内网缓存机制，能够让数十GB的模型秒级入库，大幅加快前沿AI应用的落地迭代步伐。
       </p>
-      <p>结合精细化分流与专线直连，出海网络体验将更为平顺稳定。</p></section>
+      </section>
 
       
     <div style="margin-top: 36px; padding: 22px; background: #102323; border: 1px solid #1c4040; border-radius: 12px; text-align: center;">
